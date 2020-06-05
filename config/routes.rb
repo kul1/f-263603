@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # start jiinda method routes
   jinda_methods = ['pending', 'status', 'search', 'doc', 'doc_print', 'logs', 'ajax_notice']
   jinda_methods += ['init', 'run', 'run_mail', 'document', 'run_do', 'run_form', 'end_form']
+  jinda_methods += ['run_redirect', 'run_direct_to']
   jinda_methods += ['error_logs', 'notice_logs', 'cancel', 'run_output', 'end_output']
   jinda_methods.each do |aktion| get "/jinda/#{aktion}" => "jinda##{aktion}" end
   post '/jinda/init' => 'jinda#init'
